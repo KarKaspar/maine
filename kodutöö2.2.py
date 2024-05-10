@@ -1,3 +1,4 @@
+# funktsioon vaatab et ei oleks kõrvuti ühtegi sarnast tähte ega numbrit
 def unique_in_order(sequence):
     alist = list(sequence)
     if len(alist)==0:
