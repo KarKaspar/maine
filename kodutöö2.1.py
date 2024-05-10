@@ -1,3 +1,4 @@
+# funktsioon algul eraldab kõik arvud ja kasutab valemit; (a**(p)+b**(p+1)+c**(p+2)+d**(p+3)+...)=n∗k; ja leiab k
 def dig_pow(n, p):
     l=list(str(n))
     null=0
