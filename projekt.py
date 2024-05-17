@@ -1,9 +1,6 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter import font
-import random
-amps=[]
-app=[]
 eine=[]
 summa={"Filee":4,"Supp":5,"Laste-eine":6,"Vesi":1,"Coca-Cola":2,"Kohv":3}
 aken = Tk()
@@ -29,23 +26,23 @@ def toit():
 
             
             #sõna
-            arve=0
+            arve1=0
             for i in range(len(eine)):
-                silt_pwd = ttk.Label(raam, text=(summa[eine[i]]))
+                silt_pwd = ttk.Label(raam, text=(summa[eine[i]],"\u20AC"))
                 silt_pwd.place(x=150, y=0+50*i)
                 #sõna
                 silt_pwd = ttk.Label(raam, text=(eine[i]))
                 silt_pwd.place(x=70, y=0+50*i)
-                arve=arve+summa[eine[i]]
+                arve1=arve1+summa[eine[i]]
             
-            nimi = ttk.Label(raam, text=(arve))
+            nimi = ttk.Label(raam, text=(arve1,"\u20AC"))
             nimi.place(x=200, y=120, width=150)
             #command
             def arve():
                 
                 with open("köök.txt", "w", encoding="utf-8") as f:
                     for i in range(len(eine)):
-                        f.write(eine[i] + "\n")
+                        f.write(eine[i]+"\n")
                     f.close()
                 aken3.destroy()
             # loome nupu
@@ -64,29 +61,34 @@ def toit():
         #raame
         raam = ttk.Frame(aken2,width=450,height=300,style='Danger.TFrame').grid()
 
-        #pilt
+         
         #command
         def kohv():
             eine.append("Kohv")
         # loome nupu
         nupp2 = ttk.Button(raam, text="Kohv",command=kohv)  
-        nupp2.place(x=70, y=150)
+        nupp2.place(x=70, y=100)
 
-        #pilt
+        nimi = ttk.Label(raam, text=(summa["Kohv"],"\u20AC"))
+        nimi.place(x=150, y=100, width=150)
         #command
         def coca_cola():
             eine.append("Coca-Cola")
         # loome nupu
         nupp2 = ttk.Button(raam, text="Coca-Cola",command=coca_cola)  
-        nupp2.place(x=200, y=150)
+        nupp2.place(x=70, y=150)
         
-        #pilt
+        nimi = ttk.Label(raam, text=(summa["Coca-Cola"],"\u20AC"))
+        nimi.place(x=150, y=150, width=150)
         #command
         def vesi():
             eine.append("Vesi")
         # loome nupu
         nupp2 = ttk.Button(raam, text="Vesi",command=vesi) 
-        nupp2.place(x=330, y=150)
+        nupp2.place(x=70, y=200)
+        
+        nimi = ttk.Label(raam, text=(summa["Vesi"],"\u20AC"))
+        nimi.place(x=150, y=200, width=150)
         
         def edasi():
             maksa()
@@ -111,23 +113,28 @@ def toit():
         eine.append("Laste-eine")
     # loome nupu
     nupp2 = ttk.Button(raam, text="Laste-eine",command=laste_eine)  
-    nupp2.place(x=70, y=150)
+    nupp2.place(x=70, y=100)
 
-    #pilt
+    nimi = ttk.Label(raam, text=(summa["Laste-eine"],"\u20AC"))
+    nimi.place(x=150, y=100, width=150)
     #command
     def filee():
         eine.append("Filee")
     # loome nupu
     nupp2 = ttk.Button(raam, text="Filee",command=filee)  
-    nupp2.place(x=200, y=150)
+    nupp2.place(x=70, y=150)
     
-    #pilt
+    nimi = ttk.Label(raam, text=(summa["Filee"],"\u20AC"))
+    nimi.place(x=150, y=150, width=150)
     #command
     def supp():
         eine.append("Supp")
     # loome nupu
     nupp2 = ttk.Button(raam, text="Supp",command=supp)  
-    nupp2.place(x=330, y=150)
+    nupp2.place(x=70, y=200)
+    
+    nimi = ttk.Label(raam, text=(summa["Supp"],"\u20AC"))
+    nimi.place(x=150, y=200, width=150)
     #command
     def edasi():
         jook()
