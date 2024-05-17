@@ -1,5 +1,6 @@
 # maine
 Kassa- ja tellimissüsteem
 
-Program mis võimaldavad "kliendil" esitada tellimusi, tellimused edastatakse "kööki".
+Program mis võimaldavad "kliendil" esitada tellimusi, tellimused edastatakse "köök".
 
+peab olemas olema tkinter
