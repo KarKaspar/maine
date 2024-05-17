@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter import font
+import matplotlib.pyplot as plt
 eine=[]
 summa={"Filee":4,"Supp":5,"Laste-eine":6,"Vesi":1,"Coca-Cola":2,"Kohv":3}
 aken = Tk()
@@ -14,6 +15,21 @@ def toit():
         def maksa():
             aken2.destroy()
             aken3 = Tk()
+            
+            def graafik():
+                aken3.destroy()
+                hind = []
+                for c in range(len(eine)):
+                    hind.append(summa[eine[c]])
+
+                # Visualiseerime andmeid
+                plt.figure(figsize=(8, 6))
+                plt.bar(eine, hind, color=["blue", "red"])
+                plt.title("Toodete hind")
+                plt.xlabel("Toode")
+                plt.ylabel("Hind")
+                plt.show()
+            
             aken3.title("tellimine")
             aken3.geometry("450x300")
             #stiil
@@ -44,7 +60,7 @@ def toit():
                     for i in range(len(eine)):
                         f.write(eine[i]+"\n")
                     f.close()
-                aken3.destroy()
+                graafik()
             # loome nupu
             nupp2 = ttk.Button(raam, text="Telli",command=arve)  
             nupp2.place(x=200, y=150)
