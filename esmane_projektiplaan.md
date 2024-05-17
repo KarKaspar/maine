@@ -1,4 +1,4 @@
 # Probleemi kirjeldus
+Pole piisavalt palju veebilehti kus saaks toitu tellida
 # Eesmärgid ja lahenduse ülevaade
-# Tööjaotus rühma liikmete vahel
-# Ajakava ja vahe-eesmärgid
+Teha programm, mis saadab tellimuse kööki
